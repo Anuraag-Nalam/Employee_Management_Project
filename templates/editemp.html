@@ -1,0 +1,224 @@
+{%load static%}
+<!DOCTYPE HTML>
+{% comment %} <?php session_start(); ?> {% endcomment %}
+<html>
+	<head>
+		<title>ARKV Member Portal</title>
+		<link rel="icon" href="http://example.com/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}"/>
+		<style>
+
+            table {
+                border-collapse: collapse;
+                width: 90%;
+                color: #588c7e;
+                font-size: 25px;
+                text-align: left;
+                margin-left: 100px;
+            }
+
+            th {
+                background-color: #37bdf8;
+                color: white;
+                width: 15px;
+            }
+
+                tr:nth-child(even) {background-color: #f2f2f2}
+            tr{
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            td{
+                width: 20px;
+            }
+
+            .edit-button{
+                background-color: #588c7e;
+                color:black;
+            }
+
+            .del-button{
+                background-color: red;
+            }
+
+            a{
+                color: black;
+            }
+        /*employee edit buttons in ouremployee.php*/
+
+		.empbutt{
+			text-align: center;
+			align-items: center;
+  		    justify-content: center;
+
+		}
+
+		.empbutt1{
+			display: inline-block;
+			margin-left: 10%;
+		}
+
+		.radio-position{
+			position: relative;
+			margin-left: 5%;
+		}
+
+		.submit-button{
+			text-align: center;
+		}
+		</style>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+					<h1><a href="index.php" id="logo">ARKV <em>&</em> Co</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+                            <li><a href="ceoindex.php">Home</a></li>
+								<li  class="current"><a href="ceo-our-employee.php">Our Employee</a></li>
+								<li><a href="ceo-ourclient.php">Our Client</a></li>
+							<!--<li>
+									<a href="ourclient.php">Our Client</a>
+									<ul>
+										<li><a href="#">File Upload</a>
+                                            <ul>
+												<li><a href="#">My Uploads</a></li>
+												<li><a href="#">Edit My Uploads</a></li>
+                                            </ul>
+                                        </li>    
+                                        <li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li>
+											<a href="#">4.</a>
+											<ul>
+												<li><a href="#">4.1</a></li>
+												<li><a href="#">4.2</a></li>
+												<li><a href="#">4.3</a></li>
+												<li><a href="#">4.4</a></li>
+												<li><a href="#">4.5</a></li>
+											</ul>
+										</li>
+										<li><a href="#">5</a></li>
+									</ul>
+								</li>-->
+
+								</li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+
+								<article>
+									<header>
+										<h2>Edit Employee</h2>
+									</header>
+										<div class="empbutt">
+                                            <div  class="empbutt1"><button onclick="window.location.href='addemp'">Add Employee</button></div>
+											<div  class="empbutt1"><button onclick="window.location.href='editemp'">Edit Employee</button></div>
+											<div  class="empbutt1"><button onclick="window.location.href='viewemp'">View Employee</button></div>
+										</div>
+								</article>
+
+
+						</div>
+                    </div>
+                    <br>
+					<div class="emp-table">
+                        <table>
+                            <tr>
+                                <th>Employee Id Number</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>Address</th>
+                                <th>PanCard</th>
+                                <th>Salary</th>
+                                <th>Designation</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                                <th>Ph.No</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+
+                            
+                        </table>
+                    </div>
+				</section>
+
+
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+
+					</div>
+
+					<!-- Icons -->
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+					</ul>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; Untitled. All rights reserved</li><li>Developed and Maintained by : <a href="#">AKRV & Co IT Team</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+			<script src="{% static 'assets/js/jquery.min.js'%}"></script>
+			<script src="{% static 'assets/js/jquery.dropotron.min.js'%}"></script>
+			<script src="{% static 'assets/js/browser.min.js'%}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js'%}"></script>
+            <script src="{% static 'assets/js/util.js'%}"></script>
+            <script src="{% static 'assets/js/main.js'%}"></script>
+
+	</body>
+</html>
+
+<?php
+
+$_SESSION['sess'] = $res['empnumber'];
+echo $_SESSION['sess'];
+?>
+
+<?php
+//$empnumber=0;
+//$empnumber = $_GET['empnumber'];
+//echo $empnumber;
+?>
